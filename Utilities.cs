@@ -40,7 +40,7 @@ namespace AdoptionNeuralNet
 
                 foreach (var item in query)
                 {
-                    // add a new column to the encoded table for each distictive value
+                    // add a new column to the encoded table for each distinctive value
                     list.Add(item);
                     DataColumn dataColumn = new DataColumn($"{column}_{list.Count - 1}", typeof(double));
                     encoded.Columns.Add(dataColumn);

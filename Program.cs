@@ -33,7 +33,7 @@ namespace AdoptionNeuralNet
                     FROM[AdoptionStatistics].[dbo].[ObservationsByStateYear]", connectionString);
 
                 // do one hot encoding before we split the table up into training and test
-                // otherwise we will have a problem if the StateId column has different number of distict values,
+                // otherwise we will have a problem if the StateId column has different number of distinct values,
                 // which it actually does for 2016: data for Puerto Rico 2016 is not available
                 dataTable = Utilities.OneHotEncoder(dataTable, new string[] { "StateId" });
 
